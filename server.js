@@ -15,4 +15,4 @@ require("./routes")(app);
 
 require("./config").connect(_ => {
   app.listen(3000);
-}, console.log("its working"));
+});
