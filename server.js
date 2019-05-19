@@ -1,5 +1,4 @@
 const express = require("express");
-const db = require("mysql2");
 const { join } = require("path");
 const app = express();
 
