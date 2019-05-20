@@ -17,9 +17,9 @@ module.exports = app => {
   });
   // Update a burger
   app.put("/burger/:id", (req, res) => {
-    db.query('ALTER TABLE burgers', (e, burgers) => {
+    db.query('UPDATE burgers SET devoured = 1 WHERE ?', req.body, (e) => {
       if (e) throw e
-      res.render("index", { burgers })
+      res.sendStatus(200)
     })
   });
 };

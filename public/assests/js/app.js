@@ -1,5 +1,5 @@
 let updateBurger = id => {
-    fetch(`/burger/(id)`, { method: 'PUT' })
+    fetch(`/burger/:id`, { method: 'PUT' })
         .then(_ => {
             location.reload()
         })
